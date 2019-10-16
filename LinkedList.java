@@ -11,6 +11,7 @@ public class LinkedList<T> implements List<T> {
             data = item;
             next = null;
         }
+
     }
 
     @Override
@@ -21,7 +22,7 @@ public class LinkedList<T> implements List<T> {
         } else {
             Node prev = head;
             while (prev.next != null)
-                prev=prev.next;
+                prev = prev.next;
             Node curr = new Node(item);
             prev.next = curr;
             size++;
@@ -35,14 +36,14 @@ public class LinkedList<T> implements List<T> {
 
         if (pos == 0){
             Node curr = new Node(item);
-            curr.next=head;
-            head=curr;
+            curr.next = head;
+            head = curr;
             size++;
         } else {
             Node current = new Node(item);
             Node prev = head;
             for (int i = 0; i< pos-1; i++) {
-                prev=prev.next;
+                prev = prev.next;
             }
             current.next = prev.next;
             prev.next = current;
